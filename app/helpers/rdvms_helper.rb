@@ -1,2 +1,2 @@
-module RdvMsHelper
+module RdvmsHelper
 end

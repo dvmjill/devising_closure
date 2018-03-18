@@ -1,4 +1,4 @@
-class RdvMsController < ApplicationController
+class RdvmsController < ApplicationController
   before_action :set_rdvm, only: [:show, :edit, :update, :destroy]
 
   # GET /rdvms
