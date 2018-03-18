@@ -39,6 +39,7 @@ gem 'bootstrap', '~> 4.0.0.beta2.1'
 gem 'devise'
 gem 'devise-encryptable'
 gem 'kaminari'
+gem 'wdm', '>=0.1.0' if Gem.win_platform?
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

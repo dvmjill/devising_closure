@@ -10,7 +10,51 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180318031500) do
+ActiveRecord::Schema.define(version: 20180318033926) do
+
+  create_table "clients", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "address"
+    t.string "city"
+    t.string "state"
+    t.string "zip"
+    t.string "email"
+    t.string "sec_email"
+    t.string "phone"
+    t.string "sec_phone"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pets", force: :cascade do |t|
+    t.string "name"
+    t.integer "age"
+    t.integer "weight"
+    t.string "species"
+    t.string "breed"
+    t.integer "client_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "rdvms", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "clinic_name"
+    t.string "clinic_address"
+    t.string "city"
+    t.string "state"
+    t.string "zip"
+    t.string "pref_contact"
+    t.string "phone"
+    t.string "email"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
